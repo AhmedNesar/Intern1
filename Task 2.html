@@ -1,0 +1,45 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Countries CRUD</title>
+    <link rel="stylesheet" type="text/css" href="main2.css">
+  </head>
+  <body>
+  <div align="center">
+  <form action="javascript:void(0);" method="POST" onsubmit="app.Add()"> 
+    <input type="text" id="add-name" placeholder="New country">
+    <input type="text" id="add-capital" placeholder="New capital">
+    <input type="number" id="add-code" placeholder="New code"> <br>
+    <input type="submit" value="Add" class="button">
+  </form>
+  </div>
+  <div id="spoiler" role="aria-hidden" align="center">
+    <form action="javascript:void(0);" method="POST" id="saveEdit">
+      <input type="text" id="edit-name">
+      <input type="text" id="edit-capital">
+      <input type="text" id="edit-code"> <br>
+      <input type="submit" value="Update" class="button" /> <a onclick="CloseInput()" aria-label="Close" class="button">&#10006;</a>
+    </form>
+  </div>
+
+  <p id="counter" align="center"></p>
+
+  <table border="1" class="table">
+    <tr>
+      <th>Name</th>
+      <th>Capital</th>
+      <th>Country Code</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+      <tbody id="countries">
+      </tbody>
+      <tbody id="capitals">
+      </tbody>
+      <tbody id="codes">
+      </tbody>
+  </table>
+  </body>
+  <footer><script type="text/javascript" src="js.js"></script></footer>
+  </html>
