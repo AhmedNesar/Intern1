@@ -9,7 +9,7 @@
 
     this.Count = function(data) {
       var el   = document.getElementById('counter');
-      var name = 'country';
+      var name = 'Country';
       if (data) {
         if (data > 1) {
           name = 'Countries';

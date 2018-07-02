@@ -8,9 +8,9 @@
   <body>
   <div align="center">
   <form action="javascript:void(0);" method="POST" onsubmit="app.Add()"> 
-    <input type="text" id="add-name" placeholder="New country">
-    <input type="text" id="add-capital" placeholder="New capital">
-    <input type="number" id="add-code" placeholder="New code"> <br>
+    <input type="text" id="add-name" placeholder="New country....">
+    <input type="text" id="add-capital" placeholder="New capital.....">
+    <input type="number" id="add-code" pattern=".{6,}" placeholder="New code....."> <br>
     <input type="submit" value="Add" class="button">
   </form>
   </div>
@@ -18,13 +18,13 @@
     <form action="javascript:void(0);" method="POST" id="saveEdit">
       <input type="text" id="edit-name">
       <input type="text" id="edit-capital">
-      <input type="text" id="edit-code"> <br>
+      <input type="text" id="edit-code" pattern=".{6,}"> <br>
       <input type="submit" value="Update" class="button" /> <a onclick="CloseInput()" aria-label="Close" class="button">&#10006;</a>
     </form>
   </div>
-
+  <div class="tp">
   <p id="counter" align="center"></p>
-
+  </div>
   <table border="1" class="table">
     <tr>
       <th>Name</th>
