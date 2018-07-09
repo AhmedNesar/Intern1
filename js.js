@@ -20,35 +20,6 @@
       }
     };
 
-    
-    // this.Count = function(data) {
-    //   var el2   = document.getElementById('counter');
-    //   var name2 = 'capital';
-    //   if (data) {
-    //     if (data > 1) {
-    //       name = 'capitals';
-    //     }
-    //     el2.innerHTML = data + ' ' + name2 ;
-    //   } else {
-    //     el2.innerHTML = 'No ' + name2;
-    //   }
-    // };
-
-    
-    // this.Count = function(data) {
-    //   var el3   = document.getElementById('counter');
-    //   var name3 = 'code';
-    //   if (data) {
-    //     if (data > 1) {
-    //       name = 'codes';
-    //     }
-    //     el3.innerHTML = data + ' ' + name3 ;
-    //   } else {
-    //     el3.innerHTML = 'No ' + name3;
-    //   }
-    // };
-
-    
     this.FetchAll = function() {
       var data = '';
       if (this.countries.length > 0) {
@@ -95,19 +66,22 @@
               el3.value='';
               // Dislay the new list
               this.FetchAll();
+              swal("Successfully Added!");
           }
         }
       }
     };
     this.Edit = function (item) {
-      var el = document.getElementById('edit-name');
-      var el2 = document.getElementById('edit-capital');
-      var el3 = document.getElementById('edit-code');
+
+      var el = document.getElementById('add-name');
+      var el2 = document.getElementById('add-capital');
+      var el3 = document.getElementById('add-code');
       // Display value in the field
       // Display value in the field
       el.value = this.countries[item];
       el2.value = this.capitals[item];
       el3.value = this.codes[item];
+      document.getElementById("adds").value='Update';
       // Display fields
       document.getElementById('spoiler').style.display = 'block';
       self = this;
@@ -126,23 +100,50 @@
                 // Display the new list
                 self.FetchAll();
                 // Hide fields
-                CloseInput();
+               
+                swal("Successfully Updated!");
               }
             }
           }
         }
       };
+
     this.Delete = function (item) {
-      // Delete the current row
-      this.countries.splice(item, 1);
-      this.capitals.splice(item, 1);
-      this.codes.splice(item, 1);
-      // Display the new list
-      this.FetchAll();
+        var x = confirm("Are you sure you want to delete?");
+          if (x){
+             // Delete the current row
+            this.countries.splice(item, 1);
+            this.capitals.splice(item, 1);
+            this.codes.splice(item, 1);
+          // Display the new list
+            this.FetchAll();
+            swal("Successfully Deleted!");
+          }
+       else
+          return false;
     };
-    
+
+
   }
   app.FetchAll();
   function CloseInput() {
-    document.getElementById('spoiler').style.display = 'none';
+    location.reload();
+    document.getElementById("saveEdit").reset();
   }
+  // searchFunction(){
+  //     var input, filter, table, tr, td, i;
+  //       input = document.getElementById("myInput");
+  //       filter = input.value.toUpperCase();
+  //       table = document.getElementById("table2");
+  //       tr = table.getElementsByTagName("countries");
+  //       for (i = 0; i < tr.length; i++) {
+  //         td = tr[i].getElementsByTagName("countries")[0];
+  //         if (td) {
+  //           if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+  //             tr[i].style.display = " ";
+  //     } else {
+  //       tr[i].style.display = "none";
+  //     }
+  //   }       
+  // }
+  //   }

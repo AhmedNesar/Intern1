@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+	<title>Countries Crud</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<div id="header"><p id="counter" align="center"></p></div>
+	<table width="100%"><tr><td width="50%">
+		<div id="spoiler" role="aria-hidden" align="center">
+			<form action="javascript:void(0);" method="POST" onsubmit="app.Add()" id="saveEdit">
+				<input type="text" id="add-name" placeholder="New country...." required><br>
+			    <input type="text" id="add-capital" placeholder="New capital....." required><br>
+			    <input type="text" id="add-code" pattern="^([0|\+[0-9]{1,5})"  placeholder="New code....." required><br> 
+			    <input type="submit" value="Add" class="button" id="adds">  
+			    <input type="button" value="Clear" class="button" onclick="CloseInput()" >
+			</form>
+		 	</td>
+		 </div>
+		<td>
+    <div class="div2">
+    	<input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search...." title="Type in a name">
+    	<table class="table2" border="1" id="table2">
+    		<thead class="a">
+		      <th width="70px">Name</th>
+		      <th width="65px">Capital</th>
+		      <th width="44px">Code</th>
+		      <th width="73px">Edit</th>
+		      <th>Delete</th>
+    		</thead>
+
+      		<tbody id="countries" class="tb"></tbody>
+      		<tbody id="capitals" class="tb"></tbody>
+      		<tbody id="codes" class="tb"></tbody>
+      		
+  		</table>
+  	</div>
+	</td></tr></table>
+	<footer>
+<div id="footer"><p align="center"> THANK YOU</p></div>
+<script type="text/javascript" src="js.js"></script>
+<script src="https://unpkg.com/sweetalert2@7.8.2/dist/sweetalert2.all.js"></script>
+</footer>
+</body>
+</html>		 
+		  

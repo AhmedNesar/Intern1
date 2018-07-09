@@ -1,5 +1,5 @@
 
-   table{
+   /*table{
      width:100%;
      table-layout: fixed;
      background-color: #8e2377;
@@ -41,7 +41,7 @@
      font-family: tahoma;
      font-size: 15px
    }
-
+*/
    body{
      background: -webkit-linear-gradient(left, #25c481, #25b7c4);
      background: linear-gradient(to right, #25c481, #25b7c4);
@@ -91,8 +91,8 @@
                        .container{overflow: hidden}
                        .form1{float: below;}
                        .form1{margin-left: 0px}
-    tr{transition:all .25s ease-in-out}
-    tr:hover{background-color:#F00;cursor: pointer}
+    .t{transition:all .25s ease-in-out}
+    .t:hover{background-color:#F00;cursor: pointer}
                        .button:hover {
                          background-color: #008CBA;
                          color: white;
@@ -133,9 +133,9 @@
                          label{
                        
                          color: #FFAAAA;
-                         font-weight: 100%;
+                         font-weight: 10%;
                          font-family: Rockwell;
-                         font-size: 18px;
+                         font-size: 8px;
                         
                          }
                           #spoiler{
